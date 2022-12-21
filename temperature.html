@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenperature</title>
+</head>
+<body>
+    <script>
+        function Temperature (temp) {
+          this.temp = temp;
+          this.converterF = function () {
+              return this.temp * 9 / 5;
+          }
+          this.converterK = function () {
+              return this.temp + 273;
+          }
+        }
+        let num = Number(prompt("Nhap do C"));
+        let x = new Temperature(num);
+        document.write(num + " do C = " + x.converterF() + " do F" + "<br>");
+        document.write(num + " do C = " + x.converterK() + " do K");
+    </script>
+</body>
+</html>
